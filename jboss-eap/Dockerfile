@@ -10,7 +10,7 @@ RUN chown -R jboss:jboss $JBOSS_HOME && \
 	$JBOSS_HOME/bin/add-user.sh admin Password1 --silent
 
 EXPOSE 8080 9990
-USER jboss
+#USER jboss
 CMD ["/opt/jboss/jboss-eap-7.4/bin/standalone.sh","-b","0.0.0.0","-bmanagement", "0.0.0.0"]
 
 
