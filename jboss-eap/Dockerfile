@@ -1,7 +1,8 @@
 FROM jboss/base-jdk:8
 MAINTAINER "praveen" "<mathprav@gmail.com>"
 USER root
-ADD build/jboss-eap-7.4.0.zip /tmp/
+#ADD build/jboss-eap-7.4.0.zip /tmp/
+ADD https://developers.redhat.com/content-gateway/file/jboss-eap-7.4.0.zip /tmp/
 RUN unzip /tmp/jboss-eap-7.4.0.zip
 ENV JBOSS_HOME /opt/jboss/jboss-eap-7.4
 RUN $JBOSS_HOME/bin/add-user.sh admin Password1 --silent && \
