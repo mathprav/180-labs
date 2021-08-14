@@ -4,6 +4,7 @@ USER root
 #ADD build/jboss-eap-7.4.0.zip /tmp/
 ADD https://github.com/mathprav/180-labs/raw/jboss/jboss-eap/build/jboss-eap-7.4.0.zip /tmp/
 RUN unzip /tmp/jboss-eap-7.4.0.zip
+RUN mkdir /opt/jboss/jboss-eap-7.4/standalone/log
 ENV JBOSS_HOME /opt/jboss/jboss-eap-7.4
 #RUN chown -R jboss:jboss $JBOSS_HOME && \
 #	chmod -R 755 $JBOSS_HOME && \
